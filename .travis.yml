@@ -1,0 +1,41 @@
+language: python
+sudo: false
+cache: pip
+
+python:
+  - "3.4"
+  - "2.7"
+
+env:
+  - DJANGO=1.11
+  - DJANGO=2.0
+  - DJANGO=2.1
+
+matrix:
+  exclude:
+   - python: "2.7"
+     env: DJANGO=2.0
+     env: DJANGO=2.1
+
+branches:
+  only:
+    - master
+
+before_install:
+  - pip install -U pip wheel setuptools
+  - pip install --no-cache-dir -U -r requirements-test.txt
+  - ./runflake8
+  - ./runisort
+  - npm install -g jslint
+  - jslint jsonschema_widget/static/js/*.js
+
+install:
+  - pip install $DJANGO
+  - python setup.py -q develop
+
+script:
+  - coverage run --source= runtests.py
+  - if [[ $TRAVIS_PYTHON_VERSION == 3.4 ]]; then ./tests/manage.py makemigrations --dry-run | grep "No changes detected"; fi
+
+after_success:
+  coveralls
