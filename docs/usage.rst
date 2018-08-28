@@ -12,7 +12,7 @@ To use django-jsonschema-widget in a project, add it to your `INSTALLED_APPS`:
         ...
     )
 
-Add django-jsonschema-widget's URL patterns:
+Please add django-jsonschema-widget's URL patterns in your project's ``urls.py``:
 
 .. code-block:: python
 
