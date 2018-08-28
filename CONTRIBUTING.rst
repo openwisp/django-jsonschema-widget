@@ -60,7 +60,7 @@ Ready to contribute? Here's how to set up `django-jsonschema-widget` for local d
 1. Fork the `django-jsonschema-widget` repo on GitHub.
 2. Clone your fork locally::
 
-    $ git clone git@github.com:your_name_here/django-jsonschema-widget.git
+    $ git clone https://github.com/your_name_here/django-jsonschema-widget.git
 
 3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
 
@@ -100,7 +100,7 @@ Before you submit a pull request, check that it meets these guidelines:
 2. If the pull request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
-3. The pull request should work for Python 2.6, 2.7, and 3.3, and for PyPy. Check 
+3. The pull request should work for Python 2.7, and 3.5+, and for PyPy. Check 
    https://travis-ci.org/openwisp/django-jsonschema-widget/pull_requests
    and make sure that the tests pass for all supported Python versions.
 

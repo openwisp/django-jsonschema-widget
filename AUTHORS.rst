@@ -5,9 +5,9 @@ Credits
 Development Lead
 ----------------
 
-* Federico Capoano <f.capoano@cineca.it>
+* Federico Capoano < https://github.com/nemesisdesign >
 
 Contributors
 ------------
 
-* Asif Saif Uddin <auvipy@gmail.com>
+* Asif Saif Uddin <https://github.com/auvipy>
