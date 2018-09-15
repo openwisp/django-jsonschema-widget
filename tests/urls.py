@@ -5,7 +5,8 @@ from django.conf.urls import url, include
 
 
 urlpatterns = [
-    url(
-        r'^',
-        include('jsonschema_widget.urls', namespace='jsonschema_widget')),
+    url(r'^', include(
+        'jsonschema_widget.urls',
+        namespace='jsonschema_widget')
+        ),
 ]
