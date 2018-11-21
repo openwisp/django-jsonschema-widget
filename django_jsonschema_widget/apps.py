@@ -3,4 +3,4 @@ from django.apps import AppConfig
 
 
 class JsonschemaWidgetConfig(AppConfig):
-    name = 'jsonschema_widget'
+    name = 'django_jsonschema_widget'

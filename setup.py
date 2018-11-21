@@ -21,7 +21,7 @@ def get_version(*file_paths):
     raise RuntimeError('Unable to find version string.')
 
 
-version = get_version("jsonschema_widget", "__init__.py")
+version = get_version("django_jsonschema_widget", "__init__.py")
 
 
 if sys.argv[-1] == 'publish':
@@ -53,7 +53,7 @@ setup(
     author_email='nemesis@ninux.org',
     url='https://github.com/openwisp/django-jsonschema-widget',
     packages=[
-        'jsonschema_widget',
+        'django_jsonschema_widget',
     ],
     include_package_data=True,
     install_requires=['django'],
