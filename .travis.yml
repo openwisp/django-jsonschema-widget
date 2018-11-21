@@ -24,10 +24,8 @@ branches:
 before_install:
   - pip install -U pip wheel setuptools
   - pip install --no-cache-dir -U -r requirements-test.txt
-  - ./runflake8
-  - ./runisort
   - npm install -g jslint
-  - jslint jsonschema_widget/static/js/*.js
+  - jslint django_jsonschema_widget/static/js/*.js
 
 install:
   - pip install $DJANGO
