@@ -10,7 +10,7 @@ Tests for `django-jsonschema-widget` models module.
 
 from django.test import TestCase
 
-from jsonschema_widget import models
+from django_jsonschema_widget import models
 
 
 class TestJsonschema_widget(TestCase):
