@@ -33,9 +33,8 @@ install:
 
 script:
   - coverage run --source= runtests.py
-  - if [[ $TRAVIS_PYTHON_VERSION == 3.5 ]];
-  - |
-    if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
+
+  - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
       # gets commit message of last commit before pull request merge
       COMMIT_MESSAGE=$(git log $TRAVIS_PULL_REQUEST_SHA --format=%B -n 1)
       printf "Checking commit message:\n\n"
