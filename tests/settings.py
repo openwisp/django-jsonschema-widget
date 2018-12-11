@@ -1,7 +1,6 @@
 # -*- coding: utf-8
 from __future__ import unicode_literals, absolute_import
 
-import django
 
 DEBUG = True
 USE_TZ = True
@@ -23,8 +22,7 @@ INSTALLED_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sites",
-    "jsonschema_widget",
+    "django_jsonschema_widget",
 ]
 
 SITE_ID = 1
-
