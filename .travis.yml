@@ -7,15 +7,15 @@ python:
   - "2.7"
 
 env:
-  - DJANGO=1.11
-  - DJANGO=2.0
-  - DJANGO=2.1
+  - DJANGO="django>=2.1,<2.2"
+  - DJANGO="django>=2.0,<2.1"
+  - DJANGO="django>=1.11,<2.0"
 
 matrix:
   exclude:
    - python: "2.7"
-     env: DJANGO=2.0
-     env: DJANGO=2.1
+     env: DJANGO="django>=2.0,<2.1"
+     env: DJANGO="django>=2.1,<2.2"
 
 branches:
   only:
