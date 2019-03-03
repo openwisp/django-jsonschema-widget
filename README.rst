@@ -31,7 +31,7 @@ Add it to your `INSTALLED_APPS`:
 
     INSTALLED_APPS = (
         ...
-        'jsonschema_widget.apps.JsonschemaWidgetConfig',
+        'django_jsonschema_widget.apps.JsonschemaWidgetConfig',
         ...
     )
 
@@ -39,7 +39,7 @@ Add django-jsonschema-widget's URL patterns:
 
 .. code-block:: python
 
-    from jsonschema_widget import urls as jsonschema_widget_urls
+    from django_jsonschema_widget import urls as jsonschema_widget_urls
 
 
     urlpatterns = [
