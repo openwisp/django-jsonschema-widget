@@ -4,7 +4,7 @@ Installation
 
 At the command line::
 
-    $ pip django-jsonschema-widget
+    $ pip instal django-jsonschema-widget
 
 Or, if you have virtualenvwrapper installed::
 
