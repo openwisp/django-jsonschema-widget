@@ -1,0 +1,8 @@
+coverage==4.4.1
+mock>=1.0.1
+openwisp-utils[qa]
+tox>=3.5.1
+codecov>=2.0.0
+
+
+# Additional test requirements go here

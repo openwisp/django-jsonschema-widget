@@ -1,0 +1,46 @@
+language: python
+sudo: false
+cache: pip
+
+python:
+  - "3.6"
+  - "2.7"
+
+env:
+  - DJANGO="django>=2.1,<2.2"
+  - DJANGO="django>=2.0,<2.1"
+  - DJANGO="django>=1.11,<2.0"
+
+matrix:
+  exclude:
+   - python: "2.7"
+     env: DJANGO="django>=2.0,<2.1"
+     env: DJANGO="django>=2.1,<2.2"
+
+branches:
+  only:
+    - master
+
+before_install:
+  - pip install -U pip wheel setuptools
+  - pip install --no-cache-dir -U -r requirements-test.txt
+  - npm install -g jslint
+  - jslint django_jsonschema_widget/static/js/*.js
+
+install:
+  - pip install $DJANGO
+  - python setup.py -q develop
+
+script:
+  - coverage run --source= runtests.py
+
+  - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
+      # gets commit message of last commit before pull request merge
+      COMMIT_MESSAGE=$(git log $TRAVIS_PULL_REQUEST_SHA --format=%B -n 1)
+      printf "Checking commit message:\n\n"
+      printf "$COMMIT_MESSAGE\n\n"
+      checkcommit --message "$COMMIT_MESSAGE"
+    fi
+
+after_success:
+  coveralls
