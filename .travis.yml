@@ -25,7 +25,7 @@ before_install:
   - pip install -U pip wheel setuptools
   - pip install --no-cache-dir -U -r requirements-test.txt
   - npm install -g jslint
-  - jslint django_jsonschema_widget/static/js/*.js
+  - jslint django_jsonschema_widget/static/django-jsonschema-widget/js/*.js
 
 install:
   - pip install $DJANGO
