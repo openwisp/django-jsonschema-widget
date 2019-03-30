@@ -16,6 +16,7 @@ DATABASES = {
 }
 
 ROOT_URLCONF = "tests.urls"
+STATIC_URL = "/static/"
 
 INSTALLED_APPS = [
     "django.contrib.admin",
