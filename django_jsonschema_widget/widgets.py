@@ -1,10 +1,10 @@
 from __future__ import absolute_import, unicode_literals
 
 from django import forms
-from django.contrib.admin.templatetags.admin_static import static
 from django.contrib.admin.widgets import AdminTextareaWidget
+from django.templatetags.static import static
 from django.urls import reverse
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 
 class JsonSchemaWidget(AdminTextareaWidget):
